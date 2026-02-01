@@ -45,14 +45,22 @@ task_queue.remove_oldest_task() → "Email follow-up"
 class TaskQueue:
     def __init__(self):
         # Your initialization here
-        pass
+        self.tasks = [] # created an empty list for the tasks to be loaded.
 
     def add_task(self, task):
-        pass
+        self.tasks.append(task) # adds any new task to the end of the list.
 
     def remove_oldest_task(self):
-        pass
+        if not self.tasks: # if the set is not empty, then the last element in it will be deleted.
+            return None
+        else:
+            return self.tasks.pop(0)
 
+
+task_queue = TaskQueue()
+task_queue.add_task("Email follow-up")
+task_queue.add_task("Code review")
+task_queue.remove_oldest_task()
 
 """
 Problem 3: Unique Value Counter
