@@ -77,10 +77,17 @@ tracker.get_unique_count() → 2
 
 class UniqueTracker:
     def __init__(self):
-        pass
+        self.unique = set() # creates an empty set
 
     def add(self, value):
-        pass
+        self.unique.add(value) #adds value to unique set 
 
     def get_unique_count(self):
-        pass
+        return len(self.unique) # returns the length of all the inique values
+
+
+tracker = UniqueTracker()
+tracker.add(10)
+tracker.add(20)
+tracker.add(10)
+print(tracker.get_unique_count())
