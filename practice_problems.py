@@ -30,6 +30,12 @@ test = [1, 2, 3, 4, 5]
 has_duplicates(test)
 
 """
+I had the idea to convert the list into a set since they don't allow
+repeated values. I used this to compare the set's length to the list's 
+length, which would reveal if there are any repeating values.
+"""
+
+"""
 Problem 2: Order Manager
 
 You need to maintain a list of tasks in the order they were added, and support removing tasks from the front.
@@ -63,6 +69,12 @@ task_queue.add_task("Code review")
 task_queue.remove_oldest_task()
 
 """
+I decided to use a list because they maintain their order. I was only required to 
+add a task and remove the first, so I just appended the tasks value and used the .pop
+method to remove the first task if the list isn't empty.
+"""
+
+"""
 Problem 3: Unique Value Counter
 
 You receive a stream of integer values. At any point, you should be able to return the number of unique values seen so far.
@@ -91,3 +103,9 @@ tracker.add(10)
 tracker.add(20)
 tracker.add(10)
 print(tracker.get_unique_count())
+
+"""
+I used a set to complete this problem because it will reject any repeated values.
+you can add any integer, and even repeat them, and the get_unique_count will still 
+return the cardinality of the set.
+"""
