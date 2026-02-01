@@ -14,8 +14,20 @@ Output: False
 
 def has_duplicates(product_ids):
     # Your implementation here
-    pass
+    input = product_ids
+    products = set(product_ids) # converts list to a set
 
+    if len(products) < len(input): # checks to see if the set is shorter than the list since converting the list stripped it of duplicates.
+        print(f"Input: {input}") 
+        print("Output: True") # returns true if length is smaller 
+    else:
+        print(f"Input: {input}")
+        print("Output: False") # returns false for anything else
+
+
+test = [1, 2, 3, 4, 5]
+
+has_duplicates(test)
 
 """
 Problem 2: Order Manager
